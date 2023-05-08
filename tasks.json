@@ -1,0 +1,30 @@
+[
+    {
+        "tasks": "get breakfast",
+        "completed": false
+    },
+    {
+        "tasks":"get a shower",
+        "completed": false
+    },
+    {
+        "tasks":"workout",
+        "completed": true
+    },
+    {
+        "tasks":"get lunch",
+        "completed": false
+    },
+    {
+        "tasks":"get the homeworks",
+        "completed": true
+    },
+    {
+        "tasks":"get dinner",
+        "completed": true
+    },
+    {
+        "tasks":"go to sleep earlier",
+        "completed": true
+    }
+]
