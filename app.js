@@ -4,32 +4,27 @@ createApp({
   data() {
     return {
         tasks: null,
-        tasksUrl: "./tasks.php",
-        taskAdded: null
+        getTasksUrl: "./getTasks.php",
+        taskAdded: "",
+        sendTasksUrl: "./sendtasks.php"
     }
   },
   methods:{
     addTask(){
         this.tasks.push({
-            task: this.taskAdded,
-            done: false
+            "tasks": this.taskAdded,
+            "done": false
         });
-        this.addNewTask;
+        this.taskAdded = "";
+        axios.post(this.sendTasksUrl, this.tasks, {
+            headers: { 'Content-Type': 'multipart/form-data'}
+        }).then((response) => console.log(response))
     },
-    addNewTask(){
-        const payload = {
-            "task": this.taskAdded,
-            "completed": false
-        }
-    }
   },
   mounted(){
-    axios.get(this.tasksUrl)
+    axios.get(this.getTasksUrl)
     .then(response =>{
         this.tasks = response.data
     })
-
-
-
   }
 }).mount('#app')

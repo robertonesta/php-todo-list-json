@@ -27,9 +27,8 @@
         <h1 id="title" class="my-5 text-white">My daily To-Do List</h1>
         <div class="input d-flex my-3">
             <input @keyup.enter="addTask()" v-model="taskAdded" type="text" class="form-control" placeholder="new task" aria-label="new task" aria-describedby="submit">
-        <button class="btn btn-outline-dark bg-white" type="button" id="submit">Add </button>
         </div>
-        <ul>
+        <ul class="list-unstyled">
             <li v-for="task in tasks">
                 <div class="task d-flex justify-content-between text-align-center">
                     <div><strong>{{task.tasks}}</strong></div>
