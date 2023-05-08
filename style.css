@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #001632;
+}
+li{
+    background-color: white;
+    list-style-type: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+}
+.delete{
+    border-radius: 5px;
+    background-color: rgba(244, 3, 3, 0.751);
+    aspect-ratio: 1/1;
+}
+.fa-trash-can{
+    width: 30px;
+    color: beige;
+}
