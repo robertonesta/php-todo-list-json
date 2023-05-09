@@ -32,7 +32,7 @@
             <li v-for="task in tasks">
                 <div class="task d-flex justify-content-between text-align-center">
                     <div><strong>{{task.tasks}}</strong></div>
-                    <button class="delete border-0"><i class="fa-regular fa-trash-can"></i></button>
+                    <button @click="deleteTask(index)" class="delete border-0"><i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </li>
         </ul>
