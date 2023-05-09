@@ -29,9 +29,9 @@
             <input @keyup.enter="addTask()" v-model="taskAdded" type="text" class="form-control" placeholder="new task" aria-label="new task" aria-describedby="submit">
         </div>
         <ul class="list-unstyled">
-            <li v-for="task in tasks">
+            <li v-for="(task, index) in tasks">
                 <div class="task d-flex justify-content-between text-align-center">
-                    <div><strong>{{task.tasks}}</strong></div>
+                    <div @click="switchDone(index)" :class="task.done === 'true' ? 'done' : '' "><strong>{{task.tasks}}</strong></div>
                     <button @click="deleteTask(index)" class="delete border-0"><i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </li>

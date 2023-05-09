@@ -29,6 +29,20 @@ createApp({
         .then((response) => {
           this.tasks = response.data;
         })
+    },
+    switchDone(index){
+      if (this.tasks[index].done === "true"){
+        this.tasks[index].done = "false";
+      } else {
+        this.tasks[index].done = "true";
+      };
+      axios
+        .post(this.sendTasksUrl, this.tasks, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          this.tasks = response.data;
+        })
     }
   },
   mounted(){

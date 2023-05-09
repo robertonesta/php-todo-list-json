@@ -15,10 +15,15 @@ li{
 }
 .delete{
     border-radius: 5px;
-    background-color: rgba(244, 3, 3, 0.751);
+    background-color: rgb(244, 3, 3);
     aspect-ratio: 1/1;
 }
 .fa-trash-can{
     width: 30px;
     color: beige;
+}
+
+.done{
+    text-decoration: line-through;
+    text-decoration-color: rgb(244, 3, 3);
 }
